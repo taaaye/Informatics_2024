@@ -33,5 +33,5 @@ func Laba4run() {
 	fmt.Print(TaskA(1.2, 2.2, 0.2, 1.1, 0.09), "\n")
 	fmt.Print("Задача B\n")
 	var x = []float64{1.21, 1.76, 2.53, 3.48, 4.52}
-	fmt.Print(TaskB(x, 1.1, 0.09))
+	fmt.Print(TaskB(x, 1.1, 0.09), "\n")
 }
