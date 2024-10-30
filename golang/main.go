@@ -9,3 +9,4 @@ func main() {
   fmt.Println("Кузьминов Илья Владимирович")
   lab6.RunLab6()
 }
+
