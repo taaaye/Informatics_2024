@@ -63,7 +63,7 @@ func RunLab6() {
     Plane := Airplane{
         Name:           AirplaneName,
         FlightNumber:   Route,
-        Power:          480000,
+        Power:          490000,
         PurchasedSeats: OccupiedSeats,
     }
 
