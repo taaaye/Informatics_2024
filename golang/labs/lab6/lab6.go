@@ -39,11 +39,9 @@ func (a Airplane) RevenueCalculation(PriceForPlace int) int {
 
 func (a Airplane) GetRoute() string {
     return Routes[a.FlightNumber]
-
 }
 
 func RunLab6() {
-
     fmt.Println("Выберите номер маршрута из списка:")
     for num, Route := range Routes {
         fmt.Printf("%d: %s\n", num, Route)
@@ -57,7 +55,6 @@ func RunLab6() {
     fmt.Print("Введите количество занятых мест: ")
     fmt.Scan(&OccupiedSeats)
 
-    // Ввод имени самолета
     AirplaneName := GetAirplaneName()
 
     Plane := Airplane{
