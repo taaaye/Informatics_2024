@@ -35,10 +35,3 @@ func (h *hoody) setName(newName string) {
 func (h *hoody) setColor(newColor string) {
     h.Color = newColor
 }
-
-func (h *hoody) getProductInfo() string {
-    if h.Name == "" || h.Size == "" || h.Color == "" {
-        return emptyFieldsMessage
-    }
-    return fmt.Sprintf("Худи: %s, Размер: %s, Цвет: %s, Цена: %.2f", h.Name, h.Size, h.Color, h.Price)
-}

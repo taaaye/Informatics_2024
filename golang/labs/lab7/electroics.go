@@ -32,10 +32,3 @@ func (e *electronics) getName() string {
 func (e *electronics) setName(newName string) {
     e.Name = newName
 }
-
-func (e *electronics) getProductInfo() string {
-    if e.Name == "" || e.Brand == "" || e.Color == "" {
-        return emptyFieldsMessage
-    }
-    return fmt.Sprintf("Электроника: %s, Бренд: %s, Цвет: %s, Цена: %.2f", e.Name, e.Brand, e.Color, e.Price)
-}

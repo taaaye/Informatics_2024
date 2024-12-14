@@ -36,10 +36,3 @@ func (s *shoes) setName(newName string) {
 func (s *shoes) setBrand(newBrand string) {
     s.Brand = newBrand
 }
-
-func (s *shoes) getProductInfo() string {
-    if s.Name == "" || s.Size == "" || s.Brand == "" {
-        return emptyFieldsMessage
-    }
-    return fmt.Sprintf("Обувь: %s, Размер: %s, Бренд: %s, Цена: %.2f", s.Name, s.Size, s.Brand, s.Price)
-}
