@@ -2,6 +2,8 @@ package lab7
 
 import "fmt"
 
+const emptyFieldsMessage = "Присутствуют пустые поля"
+
 func CalculationSumProduct(listproducts []Product) float64 {
     var sum float64 = 0
     for _, product := range listproducts {

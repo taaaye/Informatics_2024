@@ -8,9 +8,6 @@ type hoody struct {
     Name  string
     Color string
 }
-
-const emptyFieldsMessage = "Присутствуют пустые поля"
-
 func (h *hoody) getPrice() float64 {
     return h.Price
 }

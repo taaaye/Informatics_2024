@@ -9,8 +9,6 @@ type electronics struct {
     Color string
 }
 
-const emptyFieldsMessage = "Присутствуют пустые поля"
-
 func (e *electronics) getPrice() float64 {
     return e.Price
 }

@@ -9,8 +9,6 @@ type shoes struct {
     Size  string
 }
 
-const emptyFieldsMessage = "Присутствуют пустые поля"
-
 func (s *shoes) getPrice() float64 {
     return s.Price
 }
