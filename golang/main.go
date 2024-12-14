@@ -13,6 +13,6 @@ import (
 func main() {
   fmt.Println("Кузьминов Илья Владимирович")
   lab4.Laba4run()
-  lab6.RunLab6()
+  lab6.Laba6run()
   lab7.RunLab7()
 }
