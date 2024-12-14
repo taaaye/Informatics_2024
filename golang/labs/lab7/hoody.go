@@ -9,6 +9,8 @@ type hoody struct {
     Color string
 }
 
+const emptyFieldsMessage = "Присутствуют пустые поля"
+
 func (h *hoody) getPrice() float64 {
     return h.Price
 }
@@ -39,7 +41,7 @@ func (h *hoody) setColor(newColor string) {
 
 func (h *hoody) getProductInfo() string {
     if h.Name == "" || h.Size == "" || h.Color == "" {
-        return "Присутствуют пустые поля"
+        return emptyFieldsMessage
     }
     return fmt.Sprintf("Худи: %s, Размер: %s, Цвет: %s, Цена: %.2f", h.Name, h.Size, h.Color, h.Price)
 }

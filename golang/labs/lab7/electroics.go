@@ -9,6 +9,8 @@ type electronics struct {
     Color string
 }
 
+const emptyFieldsMessage = "Присутствуют пустые поля"
+
 func (e *electronics) getPrice() float64 {
     return e.Price
 }
@@ -33,17 +35,9 @@ func (e *electronics) setName(newName string) {
     e.Name = newName
 }
 
-func (e *electronics) setBrand(newBrand string) {
-    e.Brand = newBrand
-}
-
-func (e *electronics) setColor(newColor string) {
-    e.Color = newColor
-}
-
 func (e *electronics) getProductInfo() string {
     if e.Name == "" || e.Brand == "" || e.Color == "" {
-        return "Присутствуют пустые поля"
+        return emptyFieldsMessage
     }
     return fmt.Sprintf("Электроника: %s, Бренд: %s, Цвет: %s, Цена: %.2f", e.Name, e.Brand, e.Color, e.Price)
 }

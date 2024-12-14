@@ -9,6 +9,8 @@ type shoes struct {
     Size  string
 }
 
+const emptyFieldsMessage = "Присутствуют пустые поля"
+
 func (s *shoes) getPrice() float64 {
     return s.Price
 }
@@ -33,17 +35,13 @@ func (s *shoes) setName(newName string) {
     s.Name = newName
 }
 
-func (s *shoes) setSize(newSize string) {
-    s.Size = newSize
-}
-
 func (s *shoes) setBrand(newBrand string) {
     s.Brand = newBrand
 }
 
 func (s *shoes) getProductInfo() string {
     if s.Name == "" || s.Size == "" || s.Brand == "" {
-        return "Присутствуют пустые поля"
+        return emptyFieldsMessage
     }
     return fmt.Sprintf("Обувь: %s, Размер: %s, Бренд: %s, Цена: %.2f", s.Name, s.Size, s.Brand, s.Price)
 }
