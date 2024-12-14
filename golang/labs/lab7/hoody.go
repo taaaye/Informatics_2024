@@ -43,3 +43,4 @@ func (h *hoody) getProductInfo() string {
     }
     return fmt.Sprintf("Худи: %s, Размер: %s, Цвет: %s, Цена: %.2f", h.Name, h.Size, h.Color, h.Price)
 }
+s

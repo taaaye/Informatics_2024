@@ -31,3 +31,4 @@ func RunLab7() {
 
     fmt.Printf("Сумма товаров, с учётом скидки, равна: %.2f рублей \n", CalculationSumProduct(listproducts))
 }
+s

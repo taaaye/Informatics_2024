@@ -47,3 +47,4 @@ func (s *shoes) getProductInfo() string {
     }
     return fmt.Sprintf("Обувь: %s, Размер: %s, Бренд: %s, Цена: %.2f", s.Name, s.Size, s.Brand, s.Price)
 }
+s
