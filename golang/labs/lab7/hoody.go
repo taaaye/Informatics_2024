@@ -2,36 +2,36 @@ package lab7
 
 import "fmt"
 
-type hoody struct {
-    Size  string
-    Price float64
-    Name  string
-    Color string
+type Hoody struct {
+    size  string
+    price float64
+    name  string
+    color string
 }
-func (h *hoody) getPrice() float64 {
-    return h.Price
-}
-
-func (h *hoody) setPrice(newPrice float64) {
-    h.Price = newPrice
+func (h *Hoody) getPrice() float64 {
+    return h.price
 }
 
-func (h *hoody) applyDiscount(discount float64) {
+func (h *Hoody) setPrice(newPrice float64) {
+    h.price = newPrice
+}
+
+func (h *Hoody) applyDiscount(discount float64) {
     if discount < 0 || discount > 100 {
         fmt.Println("Скидка должна быть в диапазоне от 0 до 100%")
         return
     }
-    h.Price = h.Price * (1 - discount/100)
+    h.price = h.price * (1 - discount/100)
 }
 
-func (h *hoody) getName() string {
-    return h.Name
+func (h *Hoody) getName() string {
+    return h.name
 }
 
-func (h *hoody) setName(newName string) {
-    h.Name = newName
+func (h *Hoody) setName(newName string) {
+    h.name = newName
 }
 
-func (h *hoody) setColor(newColor string) {
-    h.Color = newColor
+func (h *Hoody) setColor(newColor string) {
+    h.color = newColor
 }

@@ -11,15 +11,16 @@ func CalculationSumProduct(listproducts []Product) float64 {
 }
 
 func Laba7run() {
-    tv := &electronics{Price: 24999.99, Name: "Телевизор", Brand: "Samsung", Color: "Черный"}
-    hoodys := &hoody{Price: 5000, Name: "Толстовка Nikifilini", Color: "Черный", Size: "XXL"}
-    trainers := &shoes{Price: 39000, Name: "Air Jordan 3 'Black Cat'", Brand: "Nike", Size: "42"}
+    var tv Product = &Electronics{price: 24999.99, name: "Телевизор", brand: "Samsung", color: "Черный"}
+    var hoodys Product = &Hoody{price: 5000, name: "Толстовка Nikifilini", color: "Черный", size: "XXL"}
+    var trainers Product = &Shoes{price: 39000, name: "Air Jordan 3 'Black Cat'", brand: "Nike", size: "42"}
 
     tv.setPrice(29999.99)
     tv.setName("Монитор")
-    hoodys.setColor("Белый")
-    trainers.setName("RS-X Efekt S&P")
-    trainers.setBrand("Puma")
+    
+    hoodys.(*Hoody).setColor("Белый")
+    trainers.(*Shoes).setName("RS-X Efekt S&P")
+    trainers.(*Shoes).setBrand("Puma")
 
     listproducts := []Product{tv, hoodys, trainers}
 

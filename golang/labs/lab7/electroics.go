@@ -2,33 +2,33 @@ package lab7
 
 import "fmt"
 
-type electronics struct {
-    Name  string
-    Price float64
-    Brand string
-    Color string
+type Electronics struct {
+    name  string
+    price float64
+    brand string
+    color string
 }
 
-func (e *electronics) getPrice() float64 {
-    return e.Price
+func (e *Electronics) getPrice() float64 {
+    return e.price
 }
 
-func (e *electronics) setPrice(newPrice float64) {
-    e.Price = newPrice
+func (e *Electronics) setPrice(newPrice float64) {
+    e.price = newPrice
 }
 
-func (e *electronics) applyDiscount(discount float64) {
+func (e *Electronics) applyDiscount(discount float64) {
     if discount < 0 || discount > 100 {
         fmt.Println("Скидка должна быть в диапазоне от 0 до 100%")
         return
     }
-    e.Price = e.Price * (1 - discount/100)
+    e.price = e.price * (1 - discount/100)
 }
 
-func (e *electronics) getName() string {
-    return e.Name
+func (e *Electronics) getName() string {
+    return e.name
 }
 
-func (e *electronics) setName(newName string) {
-    e.Name = newName
+func (e *Electronics) setName(newName string) {
+    e.name = newName
 }
