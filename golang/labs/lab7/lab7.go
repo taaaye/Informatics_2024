@@ -18,9 +18,18 @@ func Laba7run() {
     tv.setPrice(29999.99)
     tv.setName("Монитор")
     
-    hoodys.(*Hoody).setColor("Белый")
-    trainers.(*Shoes).setName("RS-X Efekt S&P")
-    trainers.(*Shoes).setBrand("Puma")
+    if h, ok := hoodys.(*Hoody); ok {
+        h.setColor("Белый")
+    } else {
+        fmt.Println("Ошибка приведения типа для Hoody")
+    }
+
+    if s, ok := trainers.(*Shoes); ok {
+        s.setName("RS-X Efekt S&P")
+        s.setBrand("Puma")
+    } else {
+        fmt.Println("Ошибка приведения типа для Shoes")
+    }
 
     listproducts := []Product{tv, hoodys, trainers}
 
