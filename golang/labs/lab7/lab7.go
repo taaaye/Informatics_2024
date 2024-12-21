@@ -35,9 +35,10 @@ func Laba7run() {
 
     fmt.Printf("Сумма товаров, без учёта скидки, равна: %.2f рублей \n", CalculationSumProduct(listproducts))
 
-    tv.applyDiscount(5)
-    hoodys.applyDiscount(25)
-    trainers.applyDiscount(15)
+    discounts := []float64{5, 25, 15} // Скидки для каждого товара
+        for i, product := range listproducts {
+         product.applyDiscount(discounts[i])
+ }
 
     fmt.Printf("Сумма товаров, с учётом скидки, равна: %.2f рублей \n", CalculationSumProduct(listproducts))
 }
